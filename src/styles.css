@@ -1,0 +1,108 @@
+:root {
+    --border: solid rgb(255, 0, 0);
+}
+
+#carousel-container,
+#carousel-canvas,
+#carousel-image,
+#arrow,
+#carousel-dots {
+    /* border: var(--border); */
+}
+
+#carousel-container {
+    position: relative;
+    height: 300px;
+    width: 300px;
+    margin: auto;
+    overflow: hidden;
+}
+
+#carousel-canvas {
+
+    position: relative;
+    width: 100%;
+    height: 100%;
+
+    transform: translateX(0%);
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-image {
+    visibility: hidden;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+
+}
+
+.carousel-image.visible {
+    visibility: visible;
+}
+
+
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.left {
+    left: 15px;
+}
+
+.right {
+    right: 15px;
+}
+
+.dots-container {
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+
+    display: flex;
+    gap: 8px;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    background-color: rgb(255, 0, 0);
+    cursor: pointer;
+
+
+}
+
+.dot-hidden {
+    visibility: hidden;
+}
+
+.dot-selected {
+    width: 12px;
+    height: 12px;
+    background-color: rgb(212, 121, 121);
+    cursor: pointer;
+
+
+
+}
+
+.dot .visible {
+    visibility: visible;
+
+}
